@@ -17,6 +17,7 @@ public class Progression {
             numbers[i] = numbers[i-1] + step;
         }
         var result = 0;
+        System.out.print("Question: ");
         for (var i = 0; i < numbers.length; i++) {
             if(numbers[i] == numbers[unknown]){
                 System.out.print(".. ");
