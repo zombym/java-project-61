@@ -15,7 +15,7 @@ public class Even {
             return true;
         } else {
             System.out.println("'" + choose + "' is wrong answer ;(. Correct answer was '" + answer + "'.");
-            System.out.println("Let's try again, " + userName);
+            System.out.println("Let's try again, " + userName + "!");
             return false;
         }
     }

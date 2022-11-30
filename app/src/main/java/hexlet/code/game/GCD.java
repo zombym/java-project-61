@@ -27,7 +27,7 @@ public class GCD {
             return true;
         } else {
             System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + result + "'.");
-            System.out.println("Let's try again, " + userName);
+            System.out.println("Let's try again, " + userName + "!");
             return false;
         }
     }
