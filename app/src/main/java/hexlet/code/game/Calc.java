@@ -5,12 +5,13 @@ import hexlet.code.Greet;
 
 public class Calc {
 
-    static boolean game(String userName) {
-        int first = Engine.random(1, 100);
-        int second = Engine.random(1, 100);
-        int znakPosition = Engine.random(0, 3);
 
+    static boolean game(String userName) {
+        int first = Engine.random(1, Engine.MAX_RANDOM_RANGE);
+        int second = Engine.random(1, Engine.MAX_RANDOM_RANGE);
         String[] znak = {"+", "-", "*"};
+        int znakPosition = Engine.random(0, znak.length - 1);
+
         int result = 0;
         switch (znak[znakPosition]) {
             case "+":
@@ -42,7 +43,7 @@ public class Calc {
         System.out.println("What is the result of the expression?");
 
         var count = 0;
-        while (count < 3) {
+        while (count < Engine.REPEAT_COUNT) {
             var result = game(userName);
             if (result) {
                 count++;

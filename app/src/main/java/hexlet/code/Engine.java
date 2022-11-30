@@ -4,6 +4,8 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class Engine {
+    public static final int MAX_RANDOM_RANGE = 100;
+    public static final int REPEAT_COUNT = 3;
     public static String input(String question) {
         System.out.print(question + " ");
         Scanner inputObj = new Scanner(System.in);

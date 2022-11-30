@@ -15,8 +15,8 @@ public class GCD {
     }
 
     static boolean game(String userName) {
-        int first = Engine.random(1, 100);
-        int second = Engine.random(1, 100);
+        int first = Engine.random(1, Engine.MAX_RANDOM_RANGE);
+        int second = Engine.random(1, Engine.MAX_RANDOM_RANGE);
 
         System.out.println("Question: " + first + " " + second);
         var answer = Engine.input("Your answer:");
@@ -37,7 +37,7 @@ public class GCD {
         System.out.println("Find the greatest common divisor of given numbers.");
 
         var count = 0;
-        while (count < 3) {
+        while (count < Engine.REPEAT_COUNT) {
             var result = game(userName);
             if (result) {
                 count++;

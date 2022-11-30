@@ -5,7 +5,7 @@ import hexlet.code.Greet;
 
 public class Even {
     static boolean game(String userName) {
-        int result = Engine.random(1, 100);
+        int result = Engine.random(1, Engine.MAX_RANDOM_RANGE);
         System.out.println("Question: " + result);
         var choose = Engine.input("Your answer:");
 
@@ -25,7 +25,7 @@ public class Even {
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
         var count = 0;
-        while (count < 3) {
+        while (count < Engine.REPEAT_COUNT) {
             var result = game(userName);
             if (result) {
                 count++;

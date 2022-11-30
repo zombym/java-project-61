@@ -18,7 +18,7 @@ public class Prime {
     }
 
     static boolean game(String userName) {
-        int number = Engine.random(1, 100);
+        int number = Engine.random(1, Engine.MAX_RANDOM_RANGE);
         System.out.println("Question: " + number);
         var answer = Engine.input("Your answer:");
 
@@ -39,7 +39,7 @@ public class Prime {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
 
         var count = 0;
-        while (count < 3) {
+        while (count < Engine.REPEAT_COUNT) {
             var result = game(userName);
             if (result) {
                 count++;
