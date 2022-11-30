@@ -33,6 +33,6 @@ public class Even {
                 return;
             }
         }
-        System.out.println("Congratulations, " + userName);
+        System.out.println("Congratulations, " + userName + "!");
     }
 }
