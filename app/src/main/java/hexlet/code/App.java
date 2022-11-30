@@ -1,5 +1,8 @@
 package hexlet.code;
 
+import hexlet.code.game.Calc;
+import hexlet.code.game.Even;
+
 public class App {
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.");
