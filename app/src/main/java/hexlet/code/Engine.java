@@ -12,7 +12,7 @@ public class Engine {
     }
     public static int random(int min, int max) {
         Random r = new Random();
-        int result = r.nextInt(max-min) + min;
+        int result = r.nextInt(max - min) + min;
         return result;
     }
 }

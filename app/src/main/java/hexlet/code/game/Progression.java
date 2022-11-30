@@ -2,7 +2,6 @@ package hexlet.code.game;
 
 import hexlet.code.Engine;
 import hexlet.code.Greet;
-import java.util.Arrays;
 
 public class Progression {
 
@@ -14,12 +13,12 @@ public class Progression {
         int[] numbers = new int[len];
         numbers[0] = first;
         for (var i = 1; i < numbers.length; i++) {
-            numbers[i] = numbers[i-1] + step;
+            numbers[i] = numbers[i - 1] + step;
         }
         var result = 0;
         System.out.print("Question: ");
         for (var i = 0; i < numbers.length; i++) {
-            if(numbers[i] == numbers[unknown]){
+            if (numbers[i] == numbers[unknown]) {
                 System.out.print(".. ");
                 result = numbers[i];
             } else {
@@ -47,7 +46,7 @@ public class Progression {
         var count = 0;
         while (count < 3) {
             var result = game(userName);
-            if(result){
+            if (result) {
                 count++;
             } else {
                 return;

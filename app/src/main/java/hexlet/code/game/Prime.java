@@ -41,7 +41,7 @@ public class Prime {
         var count = 0;
         while (count < 3) {
             var result = game(userName);
-            if(result){
+            if (result) {
                 count++;
             } else {
                 return;

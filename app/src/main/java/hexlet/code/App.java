@@ -1,6 +1,11 @@
 package hexlet.code;
 
-import hexlet.code.game.*;
+import hexlet.code.game.Calc;
+import hexlet.code.game.Even;
+import hexlet.code.game.GCD;
+import hexlet.code.game.Prime;
+import hexlet.code.game.Progression;
+
 
 public class App {
     public static void main(String[] args) {
@@ -13,7 +18,7 @@ public class App {
         System.out.println("6 - Prime");
         System.out.println("0 - Exit");
         var choose = Engine.input("Your choice:");
-        switch(choose) {
+        switch (choose) {
             case "1":
                 Greet.greetings();
                 break;
@@ -24,7 +29,7 @@ public class App {
                 Calc.calcGame();
                 break;
             case "4":
-                GCD.GCDGame();
+                GCD.gcdGame();
                 break;
             case "5":
                 Progression.progressionGame();

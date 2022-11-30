@@ -32,14 +32,14 @@ public class GCD {
         }
     }
 
-    public static void GCDGame() {
+    public static void gcdGame() {
         var userName = Greet.greetings();
         System.out.println("Find the greatest common divisor of given numbers.");
 
         var count = 0;
         while (count < 3) {
             var result = game(userName);
-            if(result){
+            if (result) {
                 count++;
             } else {
                 return;

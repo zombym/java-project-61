@@ -10,7 +10,7 @@ public class Even {
         var choose = Engine.input("Your answer:");
 
         String answer = (result % 2 == 0) ? "yes" : "no";
-        if(answer.equals(choose)){
+        if (answer.equals(choose)) {
             System.out.println("Correct!");
             return true;
         } else {
@@ -27,7 +27,7 @@ public class Even {
         var count = 0;
         while (count < 3) {
             var result = game(userName);
-            if(result){
+            if (result) {
                 count++;
             } else {
                 return;

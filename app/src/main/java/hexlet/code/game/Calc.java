@@ -22,6 +22,8 @@ public class Calc {
             case "*":
                 result = first * second;
                 break;
+            default:
+                break;
         }
         System.out.println("Question: " + first + " " + znak[znakPosition] + " " + second); // + " = " + result);
         var answer = Engine.input("Your answer:");
@@ -41,8 +43,8 @@ public class Calc {
 
         var count = 0;
         while (count < 3) {
-           var result = game(userName);
-            if(result){
+            var result = game(userName);
+            if (result) {
                 count++;
             } else {
                 return;
