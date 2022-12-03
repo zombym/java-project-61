@@ -4,13 +4,13 @@ import hexlet.code.Engine;
 
 public class GCD {
 
-    static int gcd(int a, int b) {
+    static String gcd(int a, int b) {
         while (b != 0) {
             int tmp = a % b;
             a = b;
             b = tmp;
         }
-        return a;
+        return String.valueOf(a);
     }
 
     static boolean gcdGameLogic(String userName) {
@@ -21,7 +21,7 @@ public class GCD {
         var answer = Engine.input("Your answer:");
         var result = gcd(first, second);
 
-        if (Integer.parseInt(answer) == result) {
+        if (result.equals(answer)) {
             System.out.println("Correct!");
             return true;
         } else {

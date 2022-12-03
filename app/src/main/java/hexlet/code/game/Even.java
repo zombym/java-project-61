@@ -4,16 +4,17 @@ import hexlet.code.Engine;
 
 public class Even {
     static boolean evenGameLogic(String userName) {
-        int result = Engine.random(1, Engine.MAX_RANDOM_RANGE);
-        System.out.println("Question: " + result);
-        var choose = Engine.input("Your answer:");
+        int generate = Engine.random(1, Engine.MAX_RANDOM_RANGE);
+        System.out.println("Question: " + generate);
+        var answer = Engine.input("Your answer:");
 
-        String answer = (result % 2 == 0) ? "yes" : "no";
-        if (answer.equals(choose)) {
+        String result = (generate % 2 == 0) ? "yes" : "no";
+
+        if (answer.equals(result)) {
             System.out.println("Correct!");
             return true;
         } else {
-            System.out.println("'" + choose + "' is wrong answer ;(. Correct answer was '" + answer + "'.");
+            System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + answer + "'.");
             System.out.println("Let's try again, " + userName + "!");
             return false;
         }

@@ -10,23 +10,24 @@ public class Calc {
         String[] znak = {"+", "-", "*"};
         int znakPosition = Engine.random(0, znak.length - 1);
 
-        int result = 0;
+        String result = "";
         switch (znak[znakPosition]) {
             case "+":
-                result = first + second;
+                result = String.valueOf(first + second);
                 break;
             case "-":
-                result = first - second;
+                result = String.valueOf(first - second);
                 break;
             case "*":
-                result = first * second;
+                result = String.valueOf(first * second);
                 break;
             default:
                 break;
         }
         System.out.println("Question: " + first + " " + znak[znakPosition] + " " + second); // + " = " + result);
         var answer = Engine.input("Your answer:");
-        if (Integer.parseInt(answer) == result) {
+
+        if (answer.equals(result)) {
             System.out.println("Correct!");
             return true;
         } else {

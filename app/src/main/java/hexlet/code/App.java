@@ -24,23 +24,23 @@ public class App {
                 Cli.greetings();
                 break;
             case "2":
-                userName = Cli.greetings();
+                userName = Engine.greetings();
                 Even.game("Answer 'yes' if the number is even, otherwise answer 'no'.", userName);
                 break;
             case "3":
-                userName = Cli.greetings();
+                userName = Engine.greetings();
                 Calc.game("What is the result of the expression?", userName);
                 break;
             case "4":
-                userName = Cli.greetings();
+                userName = Engine.greetings();
                 GCD.game("Find the greatest common divisor of given numbers.", userName);
                 break;
             case "5":
-                userName = Cli.greetings();
+                userName = Engine.greetings();
                 Progression.game("What number is missing in the progression?", userName);
                 break;
             case "6":
-                userName = Cli.greetings();
+                userName = Engine.greetings();
                 Prime.game("Answer 'yes' if given number is prime. Otherwise answer 'no'.", userName);
                 break;
             default:

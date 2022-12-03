@@ -18,12 +18,12 @@ public class Progression {
         for (var i = 1; i < numbers.length; i++) {
             numbers[i] = numbers[i - 1] + step;
         }
-        var result = 0;
+        var result = "";
         System.out.print("Question: ");
         for (var i = 0; i < numbers.length; i++) {
             if (numbers[i] == numbers[unknown]) {
                 System.out.print(".. ");
-                result = numbers[i];
+                result = String.valueOf(numbers[i]);
             } else {
                 System.out.print(numbers[i] + " ");
             }
@@ -32,7 +32,8 @@ public class Progression {
         System.out.println();
 
         var answer = Engine.input("Your answer:");
-        if (Integer.parseInt(answer) == result) {
+
+        if (result.equals(answer)) {
             System.out.println("Correct!");
             return true;
         } else {
