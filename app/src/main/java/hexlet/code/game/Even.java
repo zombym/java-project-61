@@ -1,10 +1,9 @@
 package hexlet.code.game;
 
 import hexlet.code.Engine;
-import hexlet.code.Greet;
 
 public class Even {
-    static boolean game(String userName) {
+    static boolean evenGameLogic(String userName) {
         int result = Engine.random(1, Engine.MAX_RANDOM_RANGE);
         System.out.println("Question: " + result);
         var choose = Engine.input("Your answer:");
@@ -20,13 +19,12 @@ public class Even {
         }
     }
 
-    public static void evenGame() {
-        var userName = Greet.greetings();
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+    public static void game(String taskMsg, String userName) {
+        System.out.println(taskMsg);
 
         var count = 0;
         while (count < Engine.REPEAT_COUNT) {
-            var result = game(userName);
+            var result = evenGameLogic(userName);
             if (result) {
                 count++;
             } else {

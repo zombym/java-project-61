@@ -1,12 +1,10 @@
 package hexlet.code.game;
 
 import hexlet.code.Engine;
-import hexlet.code.Greet;
 
 public class Calc {
 
-
-    static boolean game(String userName) {
+    static boolean calcGameLogic(String userName) {
         int first = Engine.random(1, Engine.MAX_RANDOM_RANGE);
         int second = Engine.random(1, Engine.MAX_RANDOM_RANGE);
         String[] znak = {"+", "-", "*"};
@@ -38,13 +36,12 @@ public class Calc {
         }
     }
 
-    public static void calcGame() {
-        var userName = Greet.greetings();
-        System.out.println("What is the result of the expression?");
+    public static void game(String taskMsg, String userName) {
+        System.out.println(taskMsg);
 
         var count = 0;
         while (count < Engine.REPEAT_COUNT) {
-            var result = game(userName);
+            var result = calcGameLogic(userName);
             if (result) {
                 count++;
             } else {

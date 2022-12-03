@@ -1,7 +1,8 @@
 package hexlet.code.game;
 
 import hexlet.code.Engine;
-import hexlet.code.Greet;
+
+import java.lang.reflect.Method;
 
 public class Progression {
     static final int MAX_STEP = 5;
@@ -9,7 +10,7 @@ public class Progression {
     static final int MAX_ROW = 11;
     static final int MAX_FIRST = 50;
 
-    static boolean game(String userName) {
+    static boolean progressionGameLogic(String userName) {
         int step = Engine.random(1, MAX_STEP);
         int len = Engine.random(MIN_ROW, MAX_ROW);
         int first = Engine.random(1, MAX_FIRST);
@@ -43,13 +44,12 @@ public class Progression {
         }
     }
 
-    public static void progressionGame() {
-        var userName = Greet.greetings();
-        System.out.println("What number is missing in the progression?");
+    public static void game(String taskMsg, String userName) {
+        System.out.println(taskMsg);
 
         var count = 0;
         while (count < Engine.REPEAT_COUNT) {
-            var result = game(userName);
+            var result = progressionGameLogic(userName);
             if (result) {
                 count++;
             } else {
@@ -59,3 +59,4 @@ public class Progression {
         System.out.println("Congratulations, " + userName + "!");
     }
 }
+

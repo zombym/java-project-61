@@ -1,6 +1,6 @@
 package hexlet.code;
 
-public class Greet {
+public class Cli {
     public static String greetings() {
         System.out.println("Welcome to the Brain Games!");
         var userName = Engine.input("May I have your name?");

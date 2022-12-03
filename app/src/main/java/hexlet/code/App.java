@@ -18,24 +18,30 @@ public class App {
         System.out.println("6 - Prime");
         System.out.println("0 - Exit");
         var choose = Engine.input("Your choice:");
+        String userName = "";
         switch (choose) {
             case "1":
-                Greet.greetings();
+                Cli.greetings();
                 break;
             case "2":
-                Even.evenGame();
+                userName = Cli.greetings();
+                Even.game("Answer 'yes' if the number is even, otherwise answer 'no'.", userName);
                 break;
             case "3":
-                Calc.calcGame();
+                userName = Cli.greetings();
+                Calc.game("What is the result of the expression?", userName);
                 break;
             case "4":
-                GCD.gcdGame();
+                userName = Cli.greetings();
+                GCD.game("Find the greatest common divisor of given numbers.", userName);
                 break;
             case "5":
-                Progression.progressionGame();
+                userName = Cli.greetings();
+                Progression.game("What number is missing in the progression?", userName);
                 break;
             case "6":
-                Prime.primeGame();
+                userName = Cli.greetings();
+                Prime.game("Answer 'yes' if given number is prime. Otherwise answer 'no'.", userName);
                 break;
             default:
                 System.out.println("Bay");

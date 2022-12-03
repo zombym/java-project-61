@@ -1,7 +1,6 @@
 package hexlet.code.game;
 
 import hexlet.code.Engine;
-import hexlet.code.Greet;
 
 public class GCD {
 
@@ -14,7 +13,7 @@ public class GCD {
         return a;
     }
 
-    static boolean game(String userName) {
+    static boolean gcdGameLogic(String userName) {
         int first = Engine.random(1, Engine.MAX_RANDOM_RANGE);
         int second = Engine.random(1, Engine.MAX_RANDOM_RANGE);
 
@@ -32,13 +31,12 @@ public class GCD {
         }
     }
 
-    public static void gcdGame() {
-        var userName = Greet.greetings();
-        System.out.println("Find the greatest common divisor of given numbers.");
+    public static void game(String taskMsg, String userName) {
+        System.out.println(taskMsg);
 
         var count = 0;
         while (count < Engine.REPEAT_COUNT) {
-            var result = game(userName);
+            var result = gcdGameLogic(userName);
             if (result) {
                 count++;
             } else {
