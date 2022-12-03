@@ -16,10 +16,9 @@ public class Prime {
         return "yes";
     }
 
-    static boolean primeGameLogic(String userName) {
+    static boolean primeGameLogic(String userName, String answer) {
         int number = Engine.random(1, Engine.MAX_RANDOM_RANGE);
         System.out.println("Question: " + number);
-        var answer = Engine.input("Your answer:");
 
         var result = isPrime(number);
 
@@ -31,7 +30,8 @@ public class Prime {
 
         var count = 0;
         while (count < Engine.REPEAT_COUNT) {
-            var result = primeGameLogic(userName);
+            var answer = Engine.input("Your answer:");
+            var result = primeGameLogic(userName, answer);
             if (result) {
                 count++;
             } else {
