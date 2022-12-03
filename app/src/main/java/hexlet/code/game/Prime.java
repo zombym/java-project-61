@@ -16,21 +16,22 @@ public class Prime {
         return "yes";
     }
 
-    static boolean primeGameLogic(String userName, String answer) {
+    static boolean primeGameLogic(String userName) {
         int number = Engine.random(1, Engine.MAX_RANDOM_RANGE);
         System.out.println("Question: " + number);
+        var answer = Engine.input("Your answer:");
 
         var result = isPrime(number);
 
         return Engine.answerOutput(answer, result, userName);
     }
 
-    public static void game(String taskMsg, String userName, String answer) {
+    public static void game(String taskMsg, String userName) {
         System.out.println(taskMsg);
 
         var count = 0;
         while (count < Engine.REPEAT_COUNT) {
-            var result = primeGameLogic(userName, answer);
+            var result = primeGameLogic(userName);
             if (result) {
                 count++;
             } else {

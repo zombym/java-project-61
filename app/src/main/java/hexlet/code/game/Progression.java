@@ -8,7 +8,7 @@ public class Progression {
     static final int MAX_ROW = 11;
     static final int MAX_FIRST = 50;
 
-    static boolean progressionGameLogic(String userName, String answer) {
+    static boolean progressionGameLogic(String userName) {
         int step = Engine.random(1, MAX_STEP);
         int len = Engine.random(MIN_ROW, MAX_ROW);
         int first = Engine.random(1, MAX_FIRST);
@@ -31,15 +31,17 @@ public class Progression {
 
         System.out.println();
 
+        var answer = Engine.input("Your answer:");
+
         return Engine.answerOutput(answer, result, userName);
     }
 
-    public static void game(String taskMsg, String userName, String answer) {
+    public static void game(String taskMsg, String userName) {
         System.out.println(taskMsg);
 
         var count = 0;
         while (count < Engine.REPEAT_COUNT) {
-            var result = progressionGameLogic(userName, answer);
+            var result = progressionGameLogic(userName);
             if (result) {
                 count++;
             } else {
