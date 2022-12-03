@@ -23,4 +23,14 @@ public class Engine {
         System.out.println("Hello, " + userName + "!");
         return userName;
     }
+    public static boolean answerOutput(String answer, String result, String userName) {
+        if (answer.equals(result)) {
+            System.out.println("Correct!");
+            return true;
+        } else {
+            System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + result + "'.");
+            System.out.println("Let's try again, " + userName + "!");
+            return false;
+        }
+    }
 }

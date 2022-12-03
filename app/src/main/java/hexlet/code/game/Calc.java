@@ -27,14 +27,7 @@ public class Calc {
         System.out.println("Question: " + first + " " + znak[znakPosition] + " " + second); // + " = " + result);
         var answer = Engine.input("Your answer:");
 
-        if (answer.equals(result)) {
-            System.out.println("Correct!");
-            return true;
-        } else {
-            System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + result + "'.");
-            System.out.println("Let's try again, " + userName + "!");
-            return false;
-        }
+        return Engine.answerOutput(answer, result, userName);
     }
 
     public static void game(String taskMsg, String userName) {
