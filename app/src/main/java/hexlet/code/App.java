@@ -19,29 +19,35 @@ public class App {
         System.out.println("0 - Exit");
         var choose = Engine.input("Your choice:");
         String userName = "";
+        String answer = "";
         switch (choose) {
             case "1":
                 Cli.greetings();
                 break;
             case "2":
                 userName = Engine.greetings();
-                Even.game("Answer 'yes' if the number is even, otherwise answer 'no'.", userName);
+                answer = Engine.input("Your answer:");
+                Even.game("Answer 'yes' if the number is even, otherwise answer 'no'.", userName, answer);
                 break;
             case "3":
                 userName = Engine.greetings();
-                Calc.game("What is the result of the expression?", userName);
+                answer = Engine.input("Your answer:");
+                Calc.game("What is the result of the expression?", userName, answer);
                 break;
             case "4":
                 userName = Engine.greetings();
-                GCD.game("Find the greatest common divisor of given numbers.", userName);
+                answer = Engine.input("Your answer:");
+                GCD.game("Find the greatest common divisor of given numbers.", userName, answer);
                 break;
             case "5":
                 userName = Engine.greetings();
-                Progression.game("What number is missing in the progression?", userName);
+                answer = Engine.input("Your answer:");
+                Progression.game("What number is missing in the progression?", userName, answer);
                 break;
             case "6":
                 userName = Engine.greetings();
-                Prime.game("Answer 'yes' if given number is prime. Otherwise answer 'no'.", userName);
+                answer = Engine.input("Your answer:");
+                Prime.game("Answer 'yes' if given number is prime. Otherwise answer 'no'.", userName, answer);
                 break;
             default:
                 System.out.println("Bay");
