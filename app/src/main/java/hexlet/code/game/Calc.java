@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 
 public class Calc {
 
-    static boolean calcGameLogic(String userName, String answer) {
+    static boolean calcGameLogic(String userName) {
         int first = Engine.random(1, Engine.MAX_RANDOM_RANGE);
         int second = Engine.random(1, Engine.MAX_RANDOM_RANGE);
         String[] znak = {"+", "-", "*"};
@@ -25,7 +25,7 @@ public class Calc {
                 break;
         }
         System.out.println("Question: " + first + " " + znak[znakPosition] + " " + second); // + " = " + result);
-
+        var answer = Engine.input("Your answer:");
 
         return Engine.answerOutput(answer, result, userName);
     }
@@ -35,8 +35,7 @@ public class Calc {
 
         var count = 0;
         while (count < Engine.REPEAT_COUNT) {
-            var answer = Engine.input("Your answer:");
-            var result = calcGameLogic(userName, answer);
+            var result = calcGameLogic(userName);
             if (result) {
                 count++;
             } else {
