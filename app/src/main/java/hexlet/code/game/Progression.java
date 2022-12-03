@@ -2,8 +2,6 @@ package hexlet.code.game;
 
 import hexlet.code.Engine;
 
-import java.lang.reflect.Method;
-
 public class Progression {
     static final int MAX_STEP = 5;
     static final int MIN_ROW = 5;
