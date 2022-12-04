@@ -42,6 +42,6 @@ public class Calc {
                 return;
             }
         }
-        System.out.println("Congratulations, " + userName  + "!");
+        Engine.congratulationGenerate(userName);
     }
 }

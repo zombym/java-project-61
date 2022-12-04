@@ -38,6 +38,6 @@ public class Prime {
                 return;
             }
         }
-        System.out.println("Congratulations, " + userName + "!");
+        Engine.congratulationGenerate(userName);
     }
 }

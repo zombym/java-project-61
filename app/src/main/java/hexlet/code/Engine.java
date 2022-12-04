@@ -36,4 +36,7 @@ public class Engine {
     public static void questionGenerate(String msg) {
         System.out.println(msg);
     }
+    public static void congratulationGenerate(String userName) {
+        System.out.println("Congratulations, " + userName + "!");
+    }
 }

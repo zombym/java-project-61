@@ -37,6 +37,6 @@ public class GCD {
                 return;
             }
         }
-        System.out.println("Congratulations, " + userName + "!");
+        Engine.congratulationGenerate(userName);
     }
 }
