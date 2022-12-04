@@ -21,20 +21,16 @@ public class Progression {
         var result = "";
 
         String msg = "Question: ";
-//        System.out.print("Question: ");
         for (var i = 0; i < numbers.length; i++) {
             if (numbers[i] == numbers[unknown]) {
-//                System.out.print(".. ");
                 msg += ".. ";
                 result = String.valueOf(numbers[i]);
             } else {
                 msg += numbers[i] + " ";
-//                System.out.print(numbers[i] + " ");
             }
 
         }
         Engine.questionGenerate(msg);
-//        System.out.println();
 
         var answer = Engine.input("Your answer:");
 
