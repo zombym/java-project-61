@@ -17,7 +17,8 @@ public class GCD {
         int first = Engine.random(1, Engine.MAX_RANDOM_RANGE);
         int second = Engine.random(1, Engine.MAX_RANDOM_RANGE);
 
-        System.out.println("Question: " + first + " " + second);
+        Engine.questionGenerate("Question: " + first + " " + second);
+
         var answer = Engine.input("Your answer:");
         var result = gcd(first, second);
 

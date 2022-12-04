@@ -18,7 +18,7 @@ public class Prime {
 
     static boolean primeGameLogic(String userName) {
         int number = Engine.random(1, Engine.MAX_RANDOM_RANGE);
-        System.out.println("Question: " + number);
+        Engine.questionGenerate("Question: " + number);
         var answer = Engine.input("Your answer:");
 
         var result = isPrime(number);

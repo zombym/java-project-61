@@ -5,7 +5,9 @@ import hexlet.code.Engine;
 public class Even {
     static boolean evenGameLogic(String userName) {
         int generate = Engine.random(1, Engine.MAX_RANDOM_RANGE);
-        System.out.println("Question: " + generate);
+
+        Engine.questionGenerate("Question: " + generate);
+
         var answer = Engine.input("Your answer:");
 
         String result = (generate % 2 == 0) ? "yes" : "no";

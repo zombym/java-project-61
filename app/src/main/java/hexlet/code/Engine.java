@@ -33,4 +33,7 @@ public class Engine {
             return false;
         }
     }
+    public static void questionGenerate(String msg){
+        System.out.println(msg);
+    }
 }

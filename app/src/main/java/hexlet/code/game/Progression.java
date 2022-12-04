@@ -19,17 +19,22 @@ public class Progression {
             numbers[i] = numbers[i - 1] + step;
         }
         var result = "";
-        System.out.print("Question: ");
+
+        String msg = "Question: ";
+//        System.out.print("Question: ");
         for (var i = 0; i < numbers.length; i++) {
             if (numbers[i] == numbers[unknown]) {
-                System.out.print(".. ");
-                result = String.valueOf(numbers[i]);
+//                System.out.print(".. ");
+                msg += ".. ";
+//                result = String.valueOf(numbers[i]);
             } else {
-                System.out.print(numbers[i] + " ");
+                msg += numbers[i] + " ";
+//                System.out.print(numbers[i] + " ");
             }
-        }
 
-        System.out.println();
+        }
+        Engine.questionGenerate(msg);
+//        System.out.println();
 
         var answer = Engine.input("Your answer:");
 

@@ -24,7 +24,7 @@ public class Calc {
             default:
                 break;
         }
-        System.out.println("Question: " + first + " " + znak[znakPosition] + " " + second); // + " = " + result);
+        Engine.questionGenerate("Question: " + first + " " + znak[znakPosition] + " " + second);
         var answer = Engine.input("Your answer:");
 
         return Engine.answerOutput(answer, result, userName);
