@@ -26,7 +26,7 @@ public class Progression {
             if (numbers[i] == numbers[unknown]) {
 //                System.out.print(".. ");
                 msg += ".. ";
-//                result = String.valueOf(numbers[i]);
+                result = String.valueOf(numbers[i]);
             } else {
                 msg += numbers[i] + " ";
 //                System.out.print(numbers[i] + " ");
