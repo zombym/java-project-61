@@ -10,7 +10,7 @@ public class Even {
 
         var answer = Engine.input("Your answer:");
 
-        String result = (generate % 2 == 0) ? "yes" : "no";
+        String result = Engine.isEven(generate);
 
         return Engine.answerOutput(answer, result, userName);
     }

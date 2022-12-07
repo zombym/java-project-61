@@ -39,4 +39,7 @@ public class Engine {
     public static void congratulationGenerate(String userName) {
         System.out.println("Congratulations, " + userName + "!");
     }
+    public static String isEven(int input) {
+        return (input % 2 == 0) ? "yes" : "no";
+    }
 }
