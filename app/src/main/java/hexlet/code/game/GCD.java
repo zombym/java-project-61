@@ -3,7 +3,6 @@ package hexlet.code.game;
 import hexlet.code.Engine;
 
 public class GCD {
-
     public static String[][] gcdDataGenerate() {
         String[][] data = new String[Engine.REPEAT_COUNT][2];
         for (var i = 0; i < Engine.REPEAT_COUNT; i++) {
@@ -19,7 +18,6 @@ public class GCD {
         }
         return data;
     }
-
 
     static String gcd(int a, int b) {
         while (b != 0) {

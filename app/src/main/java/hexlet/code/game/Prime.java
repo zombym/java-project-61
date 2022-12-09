@@ -3,7 +3,6 @@ package hexlet.code.game;
 import hexlet.code.Engine;
 
 public class Prime {
-
     public static String[][] primeDataGenerate() {
         String[][] data = new String[Engine.REPEAT_COUNT][2];
         for (var i = 0; i < Engine.REPEAT_COUNT; i++) {
@@ -18,7 +17,6 @@ public class Prime {
         }
         return data;
     }
-
 
     static String isPrime(int num) {
         if (num <= 1) {
