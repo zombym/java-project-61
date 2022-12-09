@@ -3,30 +3,16 @@ package hexlet.code.game;
 import hexlet.code.Engine;
 
 public class Even {
-    static boolean evenGameLogic(String userName) {
-        int generate = Engine.random(1, Engine.MAX_RANDOM_RANGE);
 
-        Engine.questionGenerate("Question: " + generate);
-
-        var answer = Engine.input("Your answer:");
-
-        String result = Engine.isEven(generate);
-
-        return Engine.answerOutput(answer, result, userName);
-    }
-
-    public static void game(String taskMsg, String userName) {
-        System.out.println(taskMsg);
-
-        var count = 0;
-        while (count < Engine.REPEAT_COUNT) {
-            var result = evenGameLogic(userName);
-            if (result) {
-                count++;
-            } else {
-                return;
-            }
+    public static String[][] evenDataGenerate() {
+        String[][] data = new String[Engine.REPEAT_COUNT][2];
+        for (var i = 0; i < Engine.REPEAT_COUNT; i++) {
+            int generate = Engine.random(1, Engine.MAX_RANDOM_RANGE);
+            String result = Engine.isEven(generate);
+            var msg = "Question: " + Integer.toString(generate);
+            data[i][0] = msg;
+            data[i][1] = result;
         }
-        Engine.congratulationGenerate(userName);
+        return data;
     }
 }
