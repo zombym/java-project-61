@@ -33,13 +33,30 @@ public class Engine {
             return false;
         }
     }
-    public static void questionGenerate(String msg) {
-        System.out.println(msg);
-    }
+//    public static void questionGenerate(String msg) {
+//        System.out.println(msg);
+//    }
     public static void congratulationGenerate(String userName) {
         System.out.println("Congratulations, " + userName + "!");
     }
     public static String isEven(int input) {
         return (input % 2 == 0) ? "yes" : "no";
+    }
+
+    public static void run(String task, String[][] roundsData) {
+        var userName = Engine.greetings();
+        var count = 0;
+        for (var i = 0; i < Engine.REPEAT_COUNT; i++) {
+            System.out.println(task);
+            System.out.println(roundsData[i][0]);
+            var answer = Engine.input("Your answer:");
+            var result = Engine.answerOutput(answer, roundsData[i][1], userName);
+            if (result) {
+                count++;
+            } else {
+                return;
+            }
+        }
+        Engine.congratulationGenerate(userName);
     }
 }
