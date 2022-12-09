@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 
 public class GCD {
 
-    static public String[][] gcdDataGenerate() {
+    public static String[][] gcdDataGenerate() {
         String[][] data = new String[Engine.REPEAT_COUNT][2];
         for (var i = 0; i < Engine.REPEAT_COUNT; i++) {
 

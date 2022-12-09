@@ -8,7 +8,7 @@ public class Progression {
     static final int MAX_ROW = 11;
     static final int MAX_FIRST = 50;
 
-    static public String[][] progressionDataGenerate() {
+    public static String[][] progressionDataGenerate() {
         String[][] data = new String[Engine.REPEAT_COUNT][2];
         for (var i = 0; i < Engine.REPEAT_COUNT; i++) {
 

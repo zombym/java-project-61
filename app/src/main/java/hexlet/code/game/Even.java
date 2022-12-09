@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 
 public class Even {
 
-    static public String[][] evenDataGenerate() {
+    public static String[][] evenDataGenerate() {
         String[][] data = new String[Engine.REPEAT_COUNT][2];
         for (var i = 0; i < Engine.REPEAT_COUNT; i++) {
             int generate = Engine.random(1, Engine.MAX_RANDOM_RANGE);

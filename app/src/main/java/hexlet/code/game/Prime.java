@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 
 public class Prime {
 
-    static public String[][] primeDataGenerate() {
+    public static String[][] primeDataGenerate() {
         String[][] data = new String[Engine.REPEAT_COUNT][2];
         for (var i = 0; i < Engine.REPEAT_COUNT; i++) {
 

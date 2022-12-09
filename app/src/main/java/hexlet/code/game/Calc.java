@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 
 public class Calc {
 
-    static public String[][] calcDataGenerate() {
+    public static String[][] calcDataGenerate() {
         String[][] data = new String[Engine.REPEAT_COUNT][2];
         for (var i = 0; i < Engine.REPEAT_COUNT; i++) {
 
