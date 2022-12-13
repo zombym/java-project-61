@@ -7,7 +7,7 @@ public class Calc {
     static final String DESCRIPTION = "What is the result of the expression?";
 
     public static void start() {
-        Engine.run(DESCRIPTION, Even.evenDataGenerate());
+        Engine.run(DESCRIPTION, Calc.calcDataGenerate());
     }
 
     public static String[][] calcDataGenerate() {

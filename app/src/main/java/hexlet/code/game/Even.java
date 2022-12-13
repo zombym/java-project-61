@@ -7,7 +7,7 @@ public class Even {
     static final String DESCRIPTION = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
     public static void start() {
-        Engine.run(DESCRIPTION, Calc.calcDataGenerate());
+        Engine.run(DESCRIPTION, Even.evenDataGenerate());
     }
 
     public static String[][] evenDataGenerate() {
