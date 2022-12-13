@@ -1,14 +1,14 @@
 package hexlet.code.game;
 
-import hexlet.code.Engine;
+import hexlet.code.ComonTools;
 
 public class GCD {
     public static String[][] gcdDataGenerate() {
-        String[][] data = new String[Engine.REPEAT_COUNT][2];
-        for (var i = 0; i < Engine.REPEAT_COUNT; i++) {
+        String[][] data = new String[ComonTools.REPEAT_COUNT][2];
+        for (var i = 0; i < ComonTools.REPEAT_COUNT; i++) {
 
-            int first = Engine.random(1, Engine.MAX_RANDOM_RANGE);
-            int second = Engine.random(1, Engine.MAX_RANDOM_RANGE);
+            int first = ComonTools.random(1, ComonTools.MAX_RANDOM_RANGE);
+            int second = ComonTools.random(1, ComonTools.MAX_RANDOM_RANGE);
 
             var msg = "Question: " + first + " " + second;
             var result = gcd(first, second);

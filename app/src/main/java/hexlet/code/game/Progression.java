@@ -1,6 +1,6 @@
 package hexlet.code.game;
 
-import hexlet.code.Engine;
+import hexlet.code.ComonTools;
 
 public class Progression {
     static final int MAX_STEP = 5;
@@ -9,13 +9,13 @@ public class Progression {
     static final int MAX_FIRST = 50;
 
     public static String[][] progressionDataGenerate() {
-        String[][] data = new String[Engine.REPEAT_COUNT][2];
-        for (var i = 0; i < Engine.REPEAT_COUNT; i++) {
+        String[][] data = new String[ComonTools.REPEAT_COUNT][2];
+        for (var i = 0; i < ComonTools.REPEAT_COUNT; i++) {
 
-            int step = Engine.random(1, MAX_STEP);
-            int len = Engine.random(MIN_ROW, MAX_ROW);
-            int first = Engine.random(1, MAX_FIRST);
-            int unknown = Engine.random(0, len - 1);
+            int step = ComonTools.random(1, MAX_STEP);
+            int len = ComonTools.random(MIN_ROW, MAX_ROW);
+            int first = ComonTools.random(1, MAX_FIRST);
+            int unknown = ComonTools.random(0, len - 1);
             int[] numbers = new int[len];
             numbers[0] = first;
             for (var j = 1; j < numbers.length; j++) {

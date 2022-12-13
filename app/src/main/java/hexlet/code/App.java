@@ -17,7 +17,7 @@ public class App {
         System.out.println("5 - Progression");
         System.out.println("6 - Prime");
         System.out.println("0 - Exit");
-        var choose = Engine.input("Your choice:");
+        var choose = ComonTools.input("Your choice:");
         switch (choose) {
             case "1":
                 Cli.greetings();

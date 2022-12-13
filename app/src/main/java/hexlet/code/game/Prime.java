@@ -1,13 +1,13 @@
 package hexlet.code.game;
 
-import hexlet.code.Engine;
+import hexlet.code.ComonTools;
 
 public class Prime {
     public static String[][] primeDataGenerate() {
-        String[][] data = new String[Engine.REPEAT_COUNT][2];
-        for (var i = 0; i < Engine.REPEAT_COUNT; i++) {
+        String[][] data = new String[ComonTools.REPEAT_COUNT][2];
+        for (var i = 0; i < ComonTools.REPEAT_COUNT; i++) {
 
-            int number = Engine.random(1, Engine.MAX_RANDOM_RANGE);
+            int number = ComonTools.random(1, ComonTools.MAX_RANDOM_RANGE);
             var msg = "Question: " + number;
 
             var result = isPrime(number);

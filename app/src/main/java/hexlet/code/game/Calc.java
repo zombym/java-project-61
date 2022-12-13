@@ -1,16 +1,16 @@
 package hexlet.code.game;
 
-import hexlet.code.Engine;
+import hexlet.code.ComonTools;
 
 public class Calc {
     public static String[][] calcDataGenerate() {
-        String[][] data = new String[Engine.REPEAT_COUNT][2];
-        for (var i = 0; i < Engine.REPEAT_COUNT; i++) {
+        String[][] data = new String[ComonTools.REPEAT_COUNT][2];
+        for (var i = 0; i < ComonTools.REPEAT_COUNT; i++) {
 
-            int first = Engine.random(1, Engine.MAX_RANDOM_RANGE);
-            int second = Engine.random(1, Engine.MAX_RANDOM_RANGE);
+            int first = ComonTools.random(1, ComonTools.MAX_RANDOM_RANGE);
+            int second = ComonTools.random(1, ComonTools.MAX_RANDOM_RANGE);
             String[] znak = {"+", "-", "*"};
-            int znakPosition = Engine.random(0, znak.length - 1);
+            int znakPosition = ComonTools.random(0, znak.length - 1);
 
             String result = "";
             switch (znak[znakPosition]) {
