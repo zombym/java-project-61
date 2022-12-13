@@ -3,7 +3,7 @@ package hexlet.code;
 import java.util.Scanner;
 import java.util.Random;
 
-public class ComonTools {
+public class CommonTools {
     public static final int MAX_RANDOM_RANGE = 100;
     public static final int REPEAT_COUNT = 3;
 
@@ -16,7 +16,7 @@ public class ComonTools {
 
     static String greetings() {
         System.out.println("Welcome to the Brain Games!");
-        var userName = ComonTools.input("May I have your name?");
+        var userName = CommonTools.input("May I have your name?");
         System.out.println("Hello, " + userName + "!");
         return userName;
     }
@@ -48,19 +48,5 @@ public class ComonTools {
         Random r = new Random();
         int result = r.nextInt(max - min) + min;
         return result;
-    }
-
-    public static void run(String task, String[][] roundsData) {
-        var userName = ComonTools.greetings();
-        for (var i = 0; i < ComonTools.REPEAT_COUNT; i++) {
-            ComonTools.printTask(task);
-            ComonTools.printQuestion(roundsData[i][0]);
-            var answer = ComonTools.input("Your answer:");
-            var result = ComonTools.printAnswer(answer, roundsData[i][1], userName);
-            if (!result) {
-                return;
-            }
-        }
-        ComonTools.printCongratulation(userName);
     }
 }

@@ -17,25 +17,25 @@ public class App {
         System.out.println("5 - Progression");
         System.out.println("6 - Prime");
         System.out.println("0 - Exit");
-        var choose = ComonTools.input("Your choice:");
+        var choose = CommonTools.input("Your choice:");
         switch (choose) {
             case "1":
                 Cli.greetings();
                 break;
             case "2":
-                Engine.run("Answer 'yes' if the number is even, otherwise answer 'no'.", Even.evenDataGenerate());
+                Even.start();
                 break;
             case "3":
-                Engine.run("What is the result of the expression?", Calc.calcDataGenerate());
+                Calc.start();
                 break;
             case "4":
-                Engine.run("Find the greatest common divisor of given numbers.", GCD.gcdDataGenerate());
+                GCD.start();
                 break;
             case "5":
-                Engine.run("What number is missing in the progression?", Progression.progressionDataGenerate());
+                Progression.start();
                 break;
             case "6":
-                Engine.run("Answer 'yes' if given number is prime. Otherwise answer 'no'.", Prime.primeDataGenerate());
+                Prime.start();
                 break;
             default:
                 System.out.println("Bay");

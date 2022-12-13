@@ -1,13 +1,20 @@
 package hexlet.code.game;
 
-import hexlet.code.ComonTools;
+import hexlet.code.CommonTools;
+import hexlet.code.Engine;
 
 public class Prime {
-    public static String[][] primeDataGenerate() {
-        String[][] data = new String[ComonTools.REPEAT_COUNT][2];
-        for (var i = 0; i < ComonTools.REPEAT_COUNT; i++) {
+    static final String DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-            int number = ComonTools.random(1, ComonTools.MAX_RANDOM_RANGE);
+    public static void start() {
+        Engine.run(DESCRIPTION, Prime.primeDataGenerate());
+    }
+
+    public static String[][] primeDataGenerate() {
+        String[][] data = new String[CommonTools.REPEAT_COUNT][2];
+        for (var i = 0; i < CommonTools.REPEAT_COUNT; i++) {
+
+            int number = CommonTools.random(1, CommonTools.MAX_RANDOM_RANGE);
             var msg = "Question: " + number;
 
             var result = isPrime(number);
