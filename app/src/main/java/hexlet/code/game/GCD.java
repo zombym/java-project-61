@@ -1,14 +1,21 @@
 package hexlet.code.game;
 
+import hexlet.code.CommonTools;
 import hexlet.code.Engine;
 
 public class GCD {
-    public static String[][] gcdDataGenerate() {
-        String[][] data = new String[Engine.REPEAT_COUNT][2];
-        for (var i = 0; i < Engine.REPEAT_COUNT; i++) {
+    static final String DESCRIPTION = "Find the greatest common divisor of given numbers.";
 
-            int first = Engine.random(1, Engine.MAX_RANDOM_RANGE);
-            int second = Engine.random(1, Engine.MAX_RANDOM_RANGE);
+    public static void start() {
+        Engine.run(DESCRIPTION, gcdDataGenerate());
+    }
+
+    static String[][] gcdDataGenerate() {
+        String[][] data = new String[CommonTools.REPEAT_COUNT][2];
+        for (var i = 0; i < CommonTools.REPEAT_COUNT; i++) {
+
+            int first = CommonTools.random(1, CommonTools.MAX_RANDOM_RANGE);
+            int second = CommonTools.random(1, CommonTools.MAX_RANDOM_RANGE);
 
             var msg = "Question: " + first + " " + second;
             var result = gcd(first, second);

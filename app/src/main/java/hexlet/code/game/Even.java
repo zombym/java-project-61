@@ -1,12 +1,19 @@
 package hexlet.code.game;
 
+import hexlet.code.CommonTools;
 import hexlet.code.Engine;
 
 public class Even {
-    public static String[][] evenDataGenerate() {
-        String[][] data = new String[Engine.REPEAT_COUNT][2];
-        for (var i = 0; i < Engine.REPEAT_COUNT; i++) {
-            int generate = Engine.random(1, Engine.MAX_RANDOM_RANGE);
+    static final String DESCRIPTION = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+
+    public static void start() {
+        Engine.run(DESCRIPTION, evenDataGenerate());
+    }
+
+    static String[][] evenDataGenerate() {
+        String[][] data = new String[CommonTools.REPEAT_COUNT][2];
+        for (var i = 0; i < CommonTools.REPEAT_COUNT; i++) {
+            int generate = CommonTools.random(1, CommonTools.MAX_RANDOM_RANGE);
             String result = Even.isEven(generate);
             var msg = "Question: " + Integer.toString(generate);
             data[i][0] = msg;
