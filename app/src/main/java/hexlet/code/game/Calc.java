@@ -7,10 +7,10 @@ public class Calc {
     static final String DESCRIPTION = "What is the result of the expression?";
 
     public static void start() {
-        Engine.run(DESCRIPTION, Calc.calcDataGenerate());
+        Engine.run(DESCRIPTION, calcDataGenerate());
     }
 
-    public static String[][] calcDataGenerate() {
+    static String[][] calcDataGenerate() {
         String[][] data = new String[CommonTools.REPEAT_COUNT][2];
         for (var i = 0; i < CommonTools.REPEAT_COUNT; i++) {
 

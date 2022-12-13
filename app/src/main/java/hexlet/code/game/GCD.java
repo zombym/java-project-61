@@ -7,10 +7,10 @@ public class GCD {
     static final String DESCRIPTION = "Find the greatest common divisor of given numbers.";
 
     public static void start() {
-        Engine.run(DESCRIPTION, GCD.gcdDataGenerate());
+        Engine.run(DESCRIPTION, gcdDataGenerate());
     }
 
-    public static String[][] gcdDataGenerate() {
+    static String[][] gcdDataGenerate() {
         String[][] data = new String[CommonTools.REPEAT_COUNT][2];
         for (var i = 0; i < CommonTools.REPEAT_COUNT; i++) {
 

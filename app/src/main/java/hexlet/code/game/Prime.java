@@ -7,10 +7,10 @@ public class Prime {
     static final String DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
     public static void start() {
-        Engine.run(DESCRIPTION, Prime.primeDataGenerate());
+        Engine.run(DESCRIPTION, primeDataGenerate());
     }
 
-    public static String[][] primeDataGenerate() {
+    static String[][] primeDataGenerate() {
         String[][] data = new String[CommonTools.REPEAT_COUNT][2];
         for (var i = 0; i < CommonTools.REPEAT_COUNT; i++) {
 

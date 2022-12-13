@@ -12,10 +12,10 @@ public class Progression {
     static final int MAX_FIRST = 50;
 
     public static void start() {
-        Engine.run(DESCRIPTION, Progression.progressionDataGenerate());
+        Engine.run(DESCRIPTION, progressionDataGenerate());
     }
 
-    public static String[][] progressionDataGenerate() {
+    static String[][] progressionDataGenerate() {
         String[][] data = new String[CommonTools.REPEAT_COUNT][2];
         for (var i = 0; i < CommonTools.REPEAT_COUNT; i++) {
 
