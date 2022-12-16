@@ -3,6 +3,8 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
+    public static final int REPEAT_COUNT = 3;
+
     static String input(String question) {
         System.out.print(question + " ");
         Scanner inputObj = new Scanner(System.in);
@@ -42,7 +44,7 @@ public class Engine {
 
     public static void run(String task, String[][] roundsData) {
         var userName = greetings();
-        for (var i = 0; i < CommonTools.REPEAT_COUNT; i++) {
+        for (var i = 0; i < REPEAT_COUNT; i++) {
             printTask(task);
             printQuestion(roundsData[i][0]);
             var answer = input("Your answer:");

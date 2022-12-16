@@ -5,17 +5,18 @@ import hexlet.code.Engine;
 
 public class GCD {
     static final String DESCRIPTION = "Find the greatest common divisor of given numbers.";
+    static final int MAX_RANDOM_RANGE = 100;
 
     public static void start() {
         Engine.run(DESCRIPTION, gcdDataGenerate());
     }
 
     static String[][] gcdDataGenerate() {
-        String[][] data = new String[CommonTools.REPEAT_COUNT][2];
-        for (var i = 0; i < CommonTools.REPEAT_COUNT; i++) {
+        String[][] data = new String[Engine.REPEAT_COUNT][2];
+        for (var i = 0; i < Engine.REPEAT_COUNT; i++) {
 
-            int first = CommonTools.random(1, CommonTools.MAX_RANDOM_RANGE);
-            int second = CommonTools.random(1, CommonTools.MAX_RANDOM_RANGE);
+            int first = CommonTools.random(1, MAX_RANDOM_RANGE);
+            int second = CommonTools.random(1, MAX_RANDOM_RANGE);
 
             var msg = "Question: " + first + " " + second;
             var result = gcd(first, second);
