@@ -5,9 +5,9 @@
 
 ## This application going away you from everyday duties and give you a lot of unbelievable HOURS.
 
-`How to run:
-git clone git@github.com:zombym/java-project-61.git
-cd app
+`How to run:   
+git clone git@github.com:zombym/java-project-61.git   
+cd app   
 make run`
 
 ## Full asciinema:   
