@@ -2,7 +2,6 @@ package hexlet.code.game;
 
 import hexlet.code.CommonTools;
 import hexlet.code.Engine;
-import java.util.Arrays;
 
 public class Progression {
     static final String DESCRIPTION = "What number is missing in the progression?";
@@ -17,7 +16,7 @@ public class Progression {
     }
 
     static String[] progressionGenerator(int first, int len, int step) {
-        String [] numbers = new String[len];
+        String[] numbers = new String[len];
         numbers[0] = Integer.toString(first);
         for (var j = 1; j < numbers.length; j++) {
             numbers[j] = Integer.toString(Integer.parseInt(numbers[j - 1]) + step);
@@ -41,7 +40,7 @@ public class Progression {
 
             String msg = "Question: ";
             for (var j = 0; j < progression.length; j++) {
-                    msg += progression[j] + " ";
+                msg += progression[j] + " ";
             }
 
             data[i][0] = msg;
