@@ -18,6 +18,10 @@ public class App {
         System.out.println("6 - Prime");
         System.out.println("0 - Exit");
         var choose = Engine.input("Your choice:");
+        chooseBox(choose);
+    }
+
+    public static void chooseBox(String choose) {
         switch (choose) {
             case "1":
                 Cli.greetings();
