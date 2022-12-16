@@ -2,7 +2,15 @@
 [![Actions Status](https://github.com/zombym/java-project-61/workflows/hexlet-check/badge.svg)](https://github.com/zombym/java-project-61/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/5f81db24a8522414aa51/maintainability)](https://codeclimate.com/github/zombym/java-project-61/maintainability)
 
-## Full asciinema:   
+
+## This application going away you from everyday duties and give you a lot of unbelievable HOURS.
+
+How to run:   
+`git clone git@github.com:zombym/java-project-61.git`   
+`cd app`   
+`make run`   
+
+## Full asciinema provide the rules and actions:   
 [![asciicast](https://asciinema.org/a/0dX7TAFlsDzDUBqo5HmwxhSLo.svg)](https://asciinema.org/a/0dX7TAFlsDzDUBqo5HmwxhSLo)  
 ## Greet
 [![asciicast](https://asciinema.org/a/MYVAvHgLgBYVqIUCcYEieqEzf.svg)](https://asciinema.org/a/MYVAvHgLgBYVqIUCcYEieqEzf) 

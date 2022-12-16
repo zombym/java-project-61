@@ -15,30 +15,32 @@ public class Progression {
         Engine.run(DESCRIPTION, progressionDataGenerate());
     }
 
+    static String[] progressionGenerator(int first, int len, int step) {
+        String[] numbers = new String[len];
+        numbers[0] = Integer.toString(first);
+        for (var j = 1; j < numbers.length; j++) {
+            numbers[j] = Integer.toString(Integer.parseInt(numbers[j - 1]) + step);
+        }
+        return numbers;
+    }
+
     static String[][] progressionDataGenerate() {
-        String[][] data = new String[CommonTools.REPEAT_COUNT][2];
-        for (var i = 0; i < CommonTools.REPEAT_COUNT; i++) {
+        String[][] data = new String[Engine.REPEAT_COUNT][2];
+        for (var i = 0; i < Engine.REPEAT_COUNT; i++) {
 
             int step = CommonTools.random(1, MAX_STEP);
             int len = CommonTools.random(MIN_ROW, MAX_ROW);
             int first = CommonTools.random(1, MAX_FIRST);
             int unknown = CommonTools.random(0, len - 1);
-            int[] numbers = new int[len];
-            numbers[0] = first;
-            for (var j = 1; j < numbers.length; j++) {
-                numbers[j] = numbers[j - 1] + step;
-            }
-            var result = "";
+
+            var progression = progressionGenerator(first, len, step);
+
+            var result = progression[unknown];
+            progression[unknown] = "..";
 
             String msg = "Question: ";
-            for (var j = 0; j < numbers.length; j++) {
-                if (numbers[j] == numbers[unknown]) {
-                    msg += ".. ";
-                    result = String.valueOf(numbers[j]);
-                } else {
-                    msg += numbers[j] + " ";
-                }
-
+            for (var j = 0; j < progression.length; j++) {
+                msg += progression[j] + " ";
             }
 
             data[i][0] = msg;

@@ -5,16 +5,17 @@ import hexlet.code.Engine;
 
 public class Prime {
     static final String DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    static final int MAX_RANDOM_RANGE = 100;
 
     public static void start() {
         Engine.run(DESCRIPTION, primeDataGenerate());
     }
 
     static String[][] primeDataGenerate() {
-        String[][] data = new String[CommonTools.REPEAT_COUNT][2];
-        for (var i = 0; i < CommonTools.REPEAT_COUNT; i++) {
+        String[][] data = new String[Engine.REPEAT_COUNT][2];
+        for (var i = 0; i < Engine.REPEAT_COUNT; i++) {
 
-            int number = CommonTools.random(1, CommonTools.MAX_RANDOM_RANGE);
+            int number = CommonTools.random(1, MAX_RANDOM_RANGE);
             var msg = "Question: " + number;
 
             var result = isPrime(number);
