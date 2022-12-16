@@ -37,7 +37,7 @@ public class Progression {
             var progression = progressionGenerator(first, len, step);
 
             var result = progression[unknown];
-            progression[unknown] = ".. ";
+            progression[unknown] = "..";
 
             String msg = "Question: ";
             for (var j = 0; j < progression.length; j++) {
