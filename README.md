@@ -5,12 +5,12 @@
 
 ## This application going away you from everyday duties and give you a lot of unbelievable HOURS.
 
-`How to run:   
-git clone git@github.com:zombym/java-project-61.git   
-cd app   
+`How to run:   \n
+git clone git@github.com:zombym/java-project-61.git   \n
+cd app   \n
 make run`
 
-## Full asciinema:   
+## Full asciinema provide the rules and actions:   
 [![asciicast](https://asciinema.org/a/0dX7TAFlsDzDUBqo5HmwxhSLo.svg)](https://asciinema.org/a/0dX7TAFlsDzDUBqo5HmwxhSLo)  
 ## Greet
 [![asciicast](https://asciinema.org/a/MYVAvHgLgBYVqIUCcYEieqEzf.svg)](https://asciinema.org/a/MYVAvHgLgBYVqIUCcYEieqEzf) 
