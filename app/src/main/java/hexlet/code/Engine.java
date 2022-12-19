@@ -42,13 +42,13 @@ public class Engine {
         }
     }
 
-    public static void run(String task, String[][] roundsData) {
+    public static void run(String description, String[][] roundsData) {
         var userName = greetings();
-        for (var i = 0; i < REPEAT_COUNT; i++) {
-            printTask(task);
-            printQuestion(roundsData[i][0]);
+        for (String[] roundData : roundsData) {
+            printTask(description);
+            printQuestion(roundData[0]);
             var answer = input("Your answer:");
-            var result = printAnswer(answer, roundsData[i][1], userName);
+            var result = printAnswer(answer, roundData[1], userName);
             if (!result) {
                 return;
             }
