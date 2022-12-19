@@ -15,7 +15,7 @@ public class Even {
         String[][] data = new String[Engine.REPEAT_COUNT][2];
         for (var i = 0; i < Engine.REPEAT_COUNT; i++) {
             int generatedNumber = CommonTools.random(1, MAX_RANDOM_RANGE);
-            String result = boolToString(Even.isEven(generatedNumber));
+            String result = isEven(generatedNumber) ? "yes" : "no";
             var msg = "Question: " + Integer.toString(generatedNumber);
             data[i][0] = msg;
             data[i][1] = result;
@@ -25,9 +25,5 @@ public class Even {
 
     static boolean isEven(int input) {
         return (input % 2 == 0);
-    }
-
-    static String boolToString(boolean bol) {
-        return bol ? "yes" : "no";
     }
 }
