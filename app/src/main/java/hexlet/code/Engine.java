@@ -44,8 +44,9 @@ public class Engine {
 
     public static void run(String description, String[][] roundsData) {
         var userName = greetings();
+        printTask(description);
         for (String[] roundData : roundsData) {
-            printTask(description);
+
             printQuestion(roundData[0]);
             var answer = input("Your answer:");
             var result = printAnswer(answer, roundData[1], userName);
