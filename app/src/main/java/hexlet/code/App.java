@@ -6,6 +6,8 @@ import hexlet.code.game.GCD;
 import hexlet.code.game.Prime;
 import hexlet.code.game.Progression;
 
+import java.util.Scanner;
+
 
 public class App {
     public static void main(String[] args) {
@@ -17,7 +19,12 @@ public class App {
         System.out.println("5 - Progression");
         System.out.println("6 - Prime");
         System.out.println("0 - Exit");
-        var choose = Engine.userInput("Your choice:");
+//        var choose = Engine.userInput("Your choice:");
+
+        Scanner inputObj = new Scanner(System.in);
+        System.out.print("Your choice: ");
+        String choose = inputObj.next();
+
         chooseBox(choose);
     }
 

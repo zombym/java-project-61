@@ -5,16 +5,20 @@ import java.util.Scanner;
 public class Engine {
     public static final int REPEAT_COUNT = 3;
 
-    static String userInput(String question) {
-        System.out.print(question + " ");
-        Scanner inputObj = new Scanner(System.in);
-        String answer = inputObj.nextLine();
-        return answer;
-    }
+//    static String userInput(String question) {
+//        System.out.print(question + " ");
+//        Scanner inputObj = new Scanner(System.in);
+//        String answer = inputObj.nextLine();
+//        return answer;
+//    }
 
     public static void run(String description, String[][] roundsData) {
         System.out.println("Welcome to the Brain Games!");
-        String userName = userInput("May I have your name?");
+
+        Scanner inputObj = new Scanner(System.in);
+        System.out.print("May I have your name?");
+        String userName = inputObj.next();
+
         System.out.println("Hello, " + userName + "!");
         System.out.println(description);
         for (String[] roundData : roundsData) {
@@ -22,7 +26,10 @@ public class Engine {
             String rightAnswer = roundData[1];
 
             System.out.println("Question: " + question);
-            String answer = userInput("Your answer:");
+//            String answer = userInput("Your answer:");
+
+            System.out.print("Your answer:");
+            String answer = inputObj.next();
 
             String rightAnswerText = "Correct!";
             String wrongAnswerText = "'" + answer + "' is wrong answer ;(. Correct answer was '" + rightAnswer + "'."
