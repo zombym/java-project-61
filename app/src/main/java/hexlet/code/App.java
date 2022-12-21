@@ -23,25 +23,19 @@ public class App {
 
     public static void chooseBox(String choose) {
         switch (choose) {
-            case "1":
+            case "1" ->
                 Cli.greetings();
-                break;
-            case "2":
+            case "2" ->
                 Even.start();
-                break;
-            case "3":
+            case "3" ->
                 Calc.start();
-                break;
-            case "4":
+            case "4" ->
                 GCD.start();
-                break;
-            case "5":
+            case "5" ->
                 Progression.start();
-                break;
-            case "6":
+            case "6" ->
                 Prime.start();
-                break;
-            default:
+            default ->
                 System.out.println("Bye");
         }
     }

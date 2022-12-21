@@ -12,16 +12,16 @@ public class Calc {
         Engine.run(DESCRIPTION, calcDataGenerate());
     }
 
-    static String calculate(int first, int second, String operator) {
+    static int calculate(int first, int second, String operator) {
         switch (operator) {
             case "+":
-                return String.valueOf(first + second);
+                return first + second;
             case "-":
-                return String.valueOf(first - second);
+                return first - second;
             case "*":
-                return String.valueOf(first * second);
+                return first * second;
             default:
-                return "";
+                return 0;
         }
     }
 
@@ -32,7 +32,7 @@ public class Calc {
             int second = CommonTools.random(1, MAX_RANDOM_RANGE);
             int operatorPosition = CommonTools.random(0, OPERATORS.length - 1);
 
-            String result = calculate(first, second, OPERATORS[operatorPosition]);
+            String result = String.valueOf(calculate(first, second, OPERATORS[operatorPosition]));
             String question = first + " " + OPERATORS[operatorPosition] + " " + second;
 
             data[i][0] = question;
