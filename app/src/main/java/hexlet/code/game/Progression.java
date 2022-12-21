@@ -27,23 +27,17 @@ public class Progression {
     static String[][] progressionDataGenerate() {
         String[][] data = new String[Engine.REPEAT_COUNT][2];
         for (var i = 0; i < Engine.REPEAT_COUNT; i++) {
-
             int step = CommonTools.random(1, MAX_STEP);
             int len = CommonTools.random(MIN_ROW, MAX_ROW);
             int first = CommonTools.random(1, MAX_FIRST);
             int unknown = CommonTools.random(0, len - 1);
-
             var progression = progressionGenerator(first, len, step);
 
-            var result = progression[unknown];
+            String result = progression[unknown];
             progression[unknown] = "..";
+            String question = String.join(" ", progression);
 
-            String msg = "Question: ";
-            for (var j = 0; j < progression.length; j++) {
-                msg += progression[j] + " ";
-            }
-
-            data[i][0] = msg;
+            data[i][0] = question;
             data[i][1] = result;
         }
         return data;

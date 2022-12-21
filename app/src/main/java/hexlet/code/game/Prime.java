@@ -14,27 +14,26 @@ public class Prime {
     static String[][] primeDataGenerate() {
         String[][] data = new String[Engine.REPEAT_COUNT][2];
         for (var i = 0; i < Engine.REPEAT_COUNT; i++) {
+            int generatedNumber = CommonTools.random(1, MAX_RANDOM_RANGE);
 
-            int number = CommonTools.random(1, MAX_RANDOM_RANGE);
-            var msg = "Question: " + number;
+            String result = isPrime(generatedNumber) ? "yes" : "no";
+            String question = Integer.toString(generatedNumber);
 
-            var result = isPrime(number);
-
-            data[i][0] = msg;
+            data[i][0] = question;
             data[i][1] = result;
         }
         return data;
     }
 
-    static String isPrime(int num) {
+    static boolean isPrime(int num) {
         if (num <= 1) {
-            return "no";
+            return false;
         }
         for (int i = 2; i <= Math.sqrt(num); i++) {
             if (num % i == 0) {
-                return "no";
+                return false;
             }
         }
-        return "yes";
+        return true;
     }
 }

@@ -28,16 +28,14 @@ public class Calc {
     static String[][] calcDataGenerate() {
         String[][] data = new String[Engine.REPEAT_COUNT][2];
         for (var i = 0; i < Engine.REPEAT_COUNT; i++) {
-
             int first = CommonTools.random(1, MAX_RANDOM_RANGE);
             int second = CommonTools.random(1, MAX_RANDOM_RANGE);
             int operatorPosition = CommonTools.random(0, OPERATORS.length - 1);
 
             String result = calculate(first, second, OPERATORS[operatorPosition]);
+            String question = first + " " + OPERATORS[operatorPosition] + " " + second;
 
-            var msg = "Question: " + first + " " + OPERATORS[operatorPosition] + " " + second;
-
-            data[i][0] = msg;
+            data[i][0] = question;
             data[i][1] = result;
         }
         return data;
