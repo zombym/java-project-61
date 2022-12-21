@@ -42,7 +42,7 @@ public class App {
                 Prime.start();
                 break;
             default:
-                System.out.println("Bay");
+                System.out.println("Bye");
         }
     }
 }

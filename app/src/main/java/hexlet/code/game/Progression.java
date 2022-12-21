@@ -38,9 +38,10 @@ public class Progression {
             var result = progression[unknown];
             progression[unknown] = "..";
 
-            String msg = "Question: ";
+            String msg = "";
             for (var j = 0; j < progression.length; j++) {
-                msg += progression[j] + " ";
+//                msg += progression[j] + " ";
+                msg += String.join(" ",progression[j]);
             }
 
             data[i][0] = msg;

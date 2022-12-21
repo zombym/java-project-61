@@ -15,10 +15,10 @@ public class Prime {
         String[][] data = new String[Engine.REPEAT_COUNT][2];
         for (var i = 0; i < Engine.REPEAT_COUNT; i++) {
 
-            int number = CommonTools.random(1, MAX_RANDOM_RANGE);
-            var msg = "Question: " + number;
+            int generatedNumber = CommonTools.random(1, MAX_RANDOM_RANGE);
+            var msg = Integer.toString(generatedNumber);
 
-            var result = isPrime(number);
+            String result = isPrime(generatedNumber) ? "yes" : "no";
 
             data[i][0] = msg;
             data[i][1] = result;
@@ -26,15 +26,15 @@ public class Prime {
         return data;
     }
 
-    static String isPrime(int num) {
+    static boolean isPrime(int num) {
         if (num <= 1) {
-            return "no";
+            return false;
         }
         for (int i = 2; i <= Math.sqrt(num); i++) {
             if (num % i == 0) {
-                return "no";
+                return false;
             }
         }
-        return "yes";
+        return true;
     }
 }

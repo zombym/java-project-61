@@ -16,7 +16,7 @@ public class Even {
         for (var i = 0; i < Engine.REPEAT_COUNT; i++) {
             int generatedNumber = CommonTools.random(1, MAX_RANDOM_RANGE);
             String result = isEven(generatedNumber) ? "yes" : "no";
-            var msg = "Question: " + Integer.toString(generatedNumber);
+            var msg = Integer.toString(generatedNumber);
             data[i][0] = msg;
             data[i][1] = result;
         }

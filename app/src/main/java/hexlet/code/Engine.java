@@ -12,17 +12,17 @@ public class Engine {
         return answer;
     }
 
-    static void printCongratulation(String userName) {
-        System.out.println("Congratulations, " + userName + "!");
-    }
-
-    static void printTask(String task) {
-        System.out.println(task);
-    }
-
-    static void printQuestion(String question) {
-        System.out.println(question);
-    }
+//    static void printCongratulation(String userName) {
+//        System.out.println("Congratulations, " + userName + "!");
+//    }
+//
+//    static void printTask(String task) {
+//        System.out.println(task);
+//    }
+//
+//    static void printQuestion(String question) {
+//        System.out.println(question);
+//    }
 
     static String greetings() {
         System.out.println("Welcome to the Brain Games!");
@@ -44,16 +44,16 @@ public class Engine {
 
     public static void run(String description, String[][] roundsData) {
         var userName = greetings();
-        printTask(description);
+        System.out.println(description);
         for (String[] roundData : roundsData) {
 
-            printQuestion(roundData[0]);
+            System.out.println("Question: " + roundData[0]);
             var answer = input("Your answer:");
             var result = printAnswer(answer, roundData[1], userName);
             if (!result) {
                 return;
             }
         }
-        printCongratulation(userName);
+        System.out.println("Congratulations, " + userName + "!");
     }
 }

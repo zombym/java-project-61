@@ -35,7 +35,7 @@ public class Calc {
 
             String result = calculate(first, second, OPERATORS[operatorPosition]);
 
-            var msg = "Question: " + first + " " + OPERATORS[operatorPosition] + " " + second;
+            var msg = first + " " + OPERATORS[operatorPosition] + " " + second;
 
             data[i][0] = msg;
             data[i][1] = result;
