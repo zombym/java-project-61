@@ -19,12 +19,9 @@ public class App {
         System.out.println("5 - Progression");
         System.out.println("6 - Prime");
         System.out.println("0 - Exit");
-//        var choose = Engine.userInput("Your choice:");
-
         Scanner inputObj = new Scanner(System.in);
         System.out.print("Your choice: ");
         String choose = inputObj.next();
-
         chooseBox(choose);
     }
 
