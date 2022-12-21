@@ -12,18 +12,6 @@ public class Engine {
         return answer;
     }
 
-//    static void printCongratulation(String userName) {
-//        System.out.println("Congratulations, " + userName + "!");
-//    }
-//
-//    static void printTask(String task) {
-//        System.out.println(task);
-//    }
-//
-//    static void printQuestion(String question) {
-//        System.out.println(question);
-//    }
-
     static String greetings() {
         System.out.println("Welcome to the Brain Games!");
         var userName = input("May I have your name?");

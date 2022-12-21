@@ -15,9 +15,11 @@ public class Even {
         String[][] data = new String[Engine.REPEAT_COUNT][2];
         for (var i = 0; i < Engine.REPEAT_COUNT; i++) {
             int generatedNumber = CommonTools.random(1, MAX_RANDOM_RANGE);
+
             String result = isEven(generatedNumber) ? "yes" : "no";
-            var msg = Integer.toString(generatedNumber);
-            data[i][0] = msg;
+            String question = Integer.toString(generatedNumber);
+
+            data[i][0] = question;
             data[i][1] = result;
         }
         return data;

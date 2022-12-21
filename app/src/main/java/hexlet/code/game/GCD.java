@@ -14,14 +14,13 @@ public class GCD {
     static String[][] gcdDataGenerate() {
         String[][] data = new String[Engine.REPEAT_COUNT][2];
         for (var i = 0; i < Engine.REPEAT_COUNT; i++) {
-
             int first = CommonTools.random(1, MAX_RANDOM_RANGE);
             int second = CommonTools.random(1, MAX_RANDOM_RANGE);
 
-            var msg = first + " " + second;
-            var result = String.valueOf(gcd(first, second));
+            String result = String.valueOf(gcd(first, second));
+            String question = first + " " + second;
 
-            data[i][0] = msg;
+            data[i][0] = question;
             data[i][1] = result;
         }
         return data;
