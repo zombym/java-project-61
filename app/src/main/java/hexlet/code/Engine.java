@@ -18,19 +18,22 @@ public class Engine {
         System.out.println("Hello, " + userName + "!");
         System.out.println(description);
         for (String[] roundData : roundsData) {
-            System.out.println("Question: " + roundData[0]);
+            String question = roundData[0];
+            String rightAnswer = roundData[1];
+
+            System.out.println("Question: " + question);
             String answer = userInput("Your answer:");
 
-            String rightAnswer = "Correct!";
-            String wrongAnswer = "'" + answer + "' is wrong answer ;(. Correct answer was '" + roundData[1] + "'."
+            String rightAnswerText = "Correct!";
+            String wrongAnswerText = "'" + answer + "' is wrong answer ;(. Correct answer was '" + rightAnswer + "'."
                     + "\n" + "Let's try again, " + userName + "!";
 
             boolean result = answer.equals(roundData[1]);
 
             if (result) {
-                System.out.println(rightAnswer);
+                System.out.println(rightAnswerText);
             } else {
-                System.out.println(wrongAnswer);
+                System.out.println(wrongAnswerText);
                 return;
             }
         }
